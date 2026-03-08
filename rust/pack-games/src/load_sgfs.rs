@@ -7,7 +7,7 @@ use std::io::BufReader;
 use std::path::PathBuf;
 use walkdir::WalkDir;
 
-use calm_go_patterns_common::baduk::{
+use go_patterns_common::baduk::{
     BOARD_SIZE, Color, Game, GameResult, Placement, Player, Point, Rank, parse_komi, parse_rank,
     parse_rules, parse_sgf_date, parse_sgf_result,
 };

@@ -1,6 +1,6 @@
 {
-  "name": "Calm Go Pattern Search",
-  "short_name": "Calm Go Patterns",
+  "name": "Go Pattern Search",
+  "short_name": "Go Patterns",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

@@ -1,5 +1,5 @@
 [package]
-name = "calm-go-patterns-pack-games"
+name = "go-patterns-pack-games"
 version = "0.1.0"
 edition = "2024"
 default-run = "pack-games"
@@ -9,7 +9,7 @@ name = "pack-games"
 path = "src/main.rs"
 
 [dependencies]
-calm-go-patterns-common = { path = "../common" }
+go-patterns-common = { path = "../common" }
 rayon = "1.10.0"
 sgf-parse = { git = "https://github.com/julianandrews/sgf-parse", version = "4.2.3", rev = "7ca35bb08026c54b8fe656172778f3673353b464" }
 serde_json = "1.0"

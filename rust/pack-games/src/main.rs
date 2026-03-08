@@ -6,7 +6,7 @@ use std::fs::File;
 use std::fs::canonicalize;
 use std::io::BufReader;
 
-use calm_go_patterns_common::baduk::{GoBoard, Player, pack_games};
+use go_patterns_common::baduk::{GoBoard, Player, pack_games};
 
 mod load_sgfs;
 use load_sgfs::load_all_sgfs;

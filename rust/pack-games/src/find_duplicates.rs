@@ -3,7 +3,7 @@ use std::collections::HashSet;
 use std::sync::Mutex;
 use std::sync::atomic::{AtomicUsize, Ordering};
 
-use calm_go_patterns_common::baduk::{
+use go_patterns_common::baduk::{
     Game, GameResult, Placement, Player, Rank, Rules, SgfDate, all_rotations,
 };
 

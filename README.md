@@ -1,6 +1,6 @@
-# Calm Go Pattern Search | [patterns.calmgo.games](https://patterns.calmgo.games)
+# Go Pattern Search | [go-patterns.kaspar.systems](https://go-patterns.kaspar.systems)
 
-[![screenshot](./screenshot.png)](https://patterns.calmgo.games)
+[![screenshot](./screenshot.png)](https://go-patterns.kaspar.systems)
 
 🚧 _Work in Progress_ 🚧
 
