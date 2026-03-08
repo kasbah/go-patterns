@@ -17,9 +17,12 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "22"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Setup wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
@@ -39,16 +42,16 @@ jobs:
           cargo clippy --all-targets --all-features -- -D warnings
 
       - name: Build wasm
-        run: yarn wasm
+        run: pnpm wasm
 
       - name: Install dependencies
-        run: cd frontend && yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Type check
-        run: cd frontend && yarn tsc --noEmit
+        run: pnpm --filter frontend tsc --noEmit
 
       - name: Lint
-        run: cd frontend && yarn lint --max-warnings 0
+        run: pnpm --filter frontend lint --max-warnings 0
 
       - name: Check formatting
-        run: yarn fmt:check
+        run: pnpm fmt:check

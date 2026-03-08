@@ -67,7 +67,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Get rust artifacts from cache
         uses: actions/cache@v4
@@ -85,10 +87,10 @@ jobs:
         run: cd rust/pack-games/python-player-name-aliases/ && gunzip player_names.json.gz
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build frontend
-        run: cd frontend && yarn build
+        run: pnpm --filter frontend build
 
       - name: Move netlify.toml
         run: mv frontend/netlify.toml .

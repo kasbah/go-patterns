@@ -30,7 +30,7 @@
     "clippy": "cargo clippy --all-targets --all-features",
     "cfx": "cargo fmt && cargo clippy --all-targets --all-features --fix --allow-dirty",
     "lint": "eslint --ext .ts,.tsx ./src",
-    "dev": "yarn wasm && vite",
+    "dev": "pnpm wasm && vite",
     "build": "vite build",
     "serve": "vite preview",
     "fmt": "prettier --write .",

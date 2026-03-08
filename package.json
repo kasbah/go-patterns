@@ -6,17 +6,14 @@
   "scripts": {
     "wasm": "wasm-pack build ./rust/wasm-search --target web",
     "clippy": "cargo clippy --all-targets --all-features",
-    "fmt": "cargo fmt && yarn workspace frontend run fmt",
+    "fmt": "cargo fmt && pnpm --filter frontend fmt",
     "fmt:check": "cargo fmt --check && prettier --check .",
     "cfx": "cargo clippy --all-targets --all-features --fix --allow-dirty && cargo fmt",
-    "lint": "yarn workspace frontend run lint",
-    "tsc": "yarn workspace frontend run tsc",
-    "dev": "yarn workspace frontend run dev"
+    "lint": "pnpm --filter frontend lint",
+    "tsc": "pnpm --filter frontend tsc",
+    "dev": "pnpm --filter frontend dev"
   },
-  "workspaces": [
-    "frontend",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@8.15.5",
   "devDependencies": {
     "prettier": "^3.5.3"
   }
